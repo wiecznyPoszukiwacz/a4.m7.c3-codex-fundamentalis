@@ -45,9 +45,8 @@ W tej fazie maszyna:
 1. proces może zakończyć się w tym samym cyklu, w którym się rozpoczął lub trwać dowolną liczbę cykli
 1. jeżeli proces nie zakończył się w poprzednim cyklu, nie rozpoczyna nowego tylko zwiększa postęp trwającego
 1. jeżeli postęp procesu dotarł do końca, kończy proces
-1. przenosi produkty procesu z PC do OB
 
-#### zasady
+#### zasady produkcji
 
 * bez względu na etap procesu maszyna może pobierać materiały z IB i przenosić produkty do OB
 * pewne sytuacje mogą spowodować Zakłócenie Procesu:
@@ -58,9 +57,21 @@ W tej fazie maszyna:
 * Zaklócenie procesu może spowodować:
   - wstrzymanie procesu
   - konieczność rozpoczęcia procesu od 0%
-  - zniszczenie materiałów wejściowych
+  - zniszczenie materiałów wejściowych i powstanie odpadów
+  - uszkodzenie maszyny
+  - zniszczenie maszyny
+* postęp procesu w cyklu może zależeć
+  - od zasilania Processing Power (zerojedynkowo, linearnie, wykładniczo)
+  - nastawów wydajności
+  - uszkodzeń
+* rodzaj materiałów wejściowych jest sprawdzany dopiero w momencie uruchomienia procesu lub zwiększenia postępu
+* użycie niewłaściwych materiałów może spowodować Zakłócenie Procesu
+* zakończenie procesu powoduje zmianę materiałów wejściowych w gotowe produkty
 
+### Faza wyjściowa
 
-
-
+W tej fazie maszyna:
+1. przenosi produkty procesu z PC do OB
+1. raportuje swój stan
+1. zgłasza zapotrzebowanie na energię IO Power i Processing Power
 
